@@ -13,22 +13,24 @@
 
       <form id="survey-form">
         <div class="row">
-          <div class="label">
+          <div class="leftLabel">
             <label id="name-label" for="name">Name:</label>
           </div>
-          <input
+          <div class="rightLabel">
+            <input
             type="text"
             id="name"
             name="name"
             placeholder="Enter your name"
             required
-            autofocus
-          />
+            autofocus />
+          </div>
         </div>
         <div class="row">
-          <div class="label">
+          <div class="leftLabel">
             <label id="email-label" for="email">Email:</label>
           </div>
+          <div class="rightLabel">
           <input
             type="email"
             id="email"
@@ -36,11 +38,13 @@
             placeholder="Enter your email"
             required
           />
+          </div>
         </div>
         <div class="row">
-          <div class="label">
+          <div class="leftLabel">
             <label id="number-label" for="age">Age:</label>
           </div>
+          <div class="rightLabel">
           <input
             type="number"
             id="number"
@@ -48,20 +52,26 @@
             required
             min="13"
             max="120"
+            placeholder="13"
           />
+          </div>
         </div>
         <div class="row">
-          <div class="label">
+          <div class="leftLabel">
             <label for="reasons">Reason for bothering me?</label>
           </div>
-          <select name="reasons" id="dropdown">
-            <option value="0">Just wanna</option>
-          </select>
+          <div class="rightLabel">
+            <select name="reasons" id="dropdown">
+                <option value="0">Just wanna</option>
+                <option value="0">I actively despise you</option>
+            </select>
+          </div>
         </div>
         <div class="row">
-          <div class="label">
+          <div class="leftLabel">
             <label for="dropdown">How satisfied were you with Scott's performance?</label>
           </div>
+          <div class="rightLabel">
           <ul>
             <li class="radio">
               <label>
@@ -82,13 +92,33 @@
                     </lable>
             </li>
           </ul>
+          </div>
         </div>
         <div class="row">
-            <div class="label">
-                <label for="dropdown">Comments?</label>
+            <div class="leftLabel">
+                <label for="improvements">What areas could I improve in?</label>
             </div>
-            <textarea placeholder="Any other comments?"></textarea>
+            <div class="rightLabel">
+                <label for="javascript">
+                    <input id="javascript" type="checkbox" name="improvement" value="1"> Javascript
+                </label>
+                <label for="ruby">
+                    <input id="ruby" type="checkbox" name="improvement" value="2"> Ruby
+                </label>
+                <label for="react">
+                    <input id="react" type="checkbox" name="improvement" value="3"> React
+                </label>
+            </div>
         </div>
+        <div class="row">
+            <div class="leftLabel">
+                <label for="comments">Comments?</label>
+            </div>
+            <div class="rightLabel">
+                <textarea placeholder="Any other comments?"></textarea>
+            </div>
+        </div>
+        <button id="submit" type="submit">Submit</button>
       </form>
     </div>
   </body>
