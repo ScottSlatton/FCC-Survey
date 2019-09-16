@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Survey</title>
+  </head>
+  <body id="main">
+    <h1 id="title">Survey Form</h1>
+    <div>
+      <p id="description">A Short Description</p>
+
+      <form id="survey-form">
+        <div class="row">
+          <div class="label">
+            <label id="name-label" for="name">Name:</label>
+          </div>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+            autofocus
+          />
+        </div>
+        <div class="row">
+          <div class="label">
+            <label id="email-label" for="email">Email:</label>
+          </div>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="row">
+          <div class="label">
+            <label id="number-label" for="age">Age:</label>
+          </div>
+          <input
+            type="number"
+            id="number"
+            name="age"
+            required
+            min="13"
+            max="120"
+          />
+        </div>
+        <div class="row">
+          <div class="label">
+            <label for="reasons">Reason for bothering me?</label>
+          </div>
+          <select name="reasons" id="dropdown">
+            <option value="0">Just wanna</option>
+          </select>
+        </div>
+        <div class="row">
+          <div class="label">
+            <label for="dropdown">How satisfied were you with Scott's performance?</label>
+          </div>
+          <ul>
+            <li class="radio">
+              <label>
+                  "Very Satisfied"
+                  <input name="radio-buttons" type="radio" value="0">
+              </lable>
+            </li>
+            <li class="radio">
+                <label>
+                    "He did alright"
+                    <input name="radio-buttons" type="radio" value="1">
+                    </lable>
+            </li>
+            <li class="radio">
+                <label>
+                    "Needs Improvement"
+                    <input name="radio-buttons" type="radio" value="2">
+                    </lable>
+            </li>
+          </ul>
+        </div>
+        <div class="row">
+            <div class="label">
+                <label for="dropdown">Comments?</label>
+            </div>
+            <textarea placeholder="Any other comments?"></textarea>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
